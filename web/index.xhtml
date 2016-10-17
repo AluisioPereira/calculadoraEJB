@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/bootstrap-theme.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/aluisioIcomoon/style.css" media="screen" />
+        <title>CALCULADORA</title>
+    </h:head>
+    <h:body>
+
+        <div class="panel panel-success">
+            <div class="panel-heading label-primary">
+                <h1>CALCULADORA - EJB</h1>
+            </div>
+            <div class="panel-body">
+
+                <h:form> 
+                    <span class="btn btn-link">
+                        <h:commandLink class="aluisio-delete btn btn-danger" action="#{calculadorMB.limpar()}"/>
+                    </span>
+                    <div class="input-group col-lg-2">
+                        <span class="input-group-addon label-info" id="basic-addon1">1º VALOR </span>
+                        <h:inputText class="form-control" value="#{calculadorMB.va}" />
+                    </div>
+                    <div class="input-group col-lg-2">
+                        <span class="input-group-addon label-warning" id="basic-addon1">2º VALOR </span>
+                        <h:inputText class="form-control" value="#{calculadorMB.vb}"/>
+                    </div>
+                    <br/>
+                    <span class="btn list-group-item-success aluisio-add_circle">
+                        <h:commandButton class="btn list-group-item-success" value="SOMA" action="#{calculadorMB.soma()}"/>
+                    </span>
+                    <span class="btn list-group-item-warning aluisio-remove_circle">
+                        <h:commandButton class="btn list-group-item-warning" value="SUBTRAÇÃO" action="#{calculadorMB.subtracao()}"/>
+                    </span>
+                    <span class="btn list-group-item-info aluisio-cancel">
+                        <h:commandButton class="btn list-group-item-info" value="MULTIPLICAÇÃO" action="#{calculadorMB.multiplicacao()}"/>
+                    </span>
+                    <span class="btn list-group-item-danger aluisio-do_not_disturb_alt">
+                        <h:commandButton class="btn list-group-item-danger" value="DIVISÃO" action="#{calculadorMB.divisao()}"/><br/> 
+                    </span>
+                </h:form>
+
+            </div>                                                                                                                                                                      
+            <div class="panel-footer panel-info>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ">
+                <h4>RESULTADO: <strong> <h:outputText value="#{calculadorMB.resultado}"/></strong></h4>
+                <h:messages/> 
+            </div>
+        </div>
+    </h:body>
+</html>
+
